@@ -1,3 +1,13 @@
 Outputs/.gitkeep
 Create Outputs subfolder in SQL
 Add SQL project screenshots
+cd path/to/your/repo/SQL
+mkdir Outputs
+cd Outputs
+# Add your screenshots here
+git add .
+git commit -m "Add Outputs folder and screenshots"
+git push origin main
+SQL/
+│── SQL_Code/  (contains your .sql scripts)
+└── Outputs/   (contains screenshots)
