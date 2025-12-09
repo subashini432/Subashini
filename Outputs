@@ -11,3 +11,4 @@ git push origin main
 SQL/
 │── SQL_Code/  (contains your .sql scripts)
 └── Outputs/   (contains screenshots)
+Empty .gitkeep file for Outputs folder
