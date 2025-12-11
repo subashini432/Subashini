@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Project — Classic Models</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2, h3 { color: #333; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: Consolas, monospace; }
+        img { max-width: 100%; height: auto; margin: 10px 0; }
+        hr { border: 1px solid #ddd; margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+<h1>SQL Project: Classic Models Data Analysis</h1>
+
+<h2>1. Project Overview</h2>
+<p>This project showcases a complete SQL analysis using the Classic Models database. 
+It includes SQL fundamentals, joins, aggregations, DDL, views, stored procedures, triggers, error handling, and window functions.</p>
+
+<hr>
+
+<h2>2. Dataset Information</h2>
+<ul>
+    <li>Customers</li>
+    <li>Orders</li>
+    <li>OrderDetails</li>
+    <li>Products</li>
+    <li>ProductLines</li>
+    <li>Employees</li>
+    <li>Offices</li>
+    <li>Payments</li>
+</ul>
+<p>Database file: <code>./data/classicmodels-subashini.sql</code></p>
+
+<h3>Entity Relationship Diagram (ERD)</h3>
+<img src="./images/erd.png" alt="ERD">
+
+<hr>
+
+<h2>3. SQL Queries and Screenshots</h2>
+
+<h3>Q1(a) Employees reporting to employee 1102</h3>
+<pre><code>SELECT employeeNumber, firstName, lastName
+FROM employees
+WHERE jobTitle = 'Sales Rep'
+  AND reportsTo = 1102;
+</code></pre>
+<img src="./images/query1a.png" alt="Q1(a)">
+
+<h3>Q1(b) ProductLine values ending with 'cars'</h3>
+<pre><code>SELECT DISTINCT productLine
+FROM products
+WHERE productLine LIKE '%cars';
+</code></pre>
+<img src="./images/query1b.png" alt="Q1(b)">
+
+<h3>Q2 — CASE Statement (Customer Segmentation)</h3>
+<pre><code>SELECT customerNumber, customerName,
+CASE 
+    WHEN country IN ('USA','Canada') THEN 'North America'
+    WHEN country IN ('UK','France','Germany') THEN 'Europe'
+    ELSE 'Other'
+END AS CustomerSegment
+FROM customers;
+</code></pre>
+<img src="./images/query2.png" alt="Q2">
+
+<h3>Q3(a) Top 10 products by total order quantity</h3>
+<pre><code>SELECT productCode, SUM(quantityOrdered) AS total_quantity
+FROM orderdetails
+GROUP BY productCode
+ORDER BY total_quantity DESC
+LIMIT 10;
+</code></pre>
+<img src="./images/query3a.png" alt="Q3(a)">
+
+<h3>Q3(b) Payments count by month (>20)</h3>
+<pre><code>SELECT MONTHNAME(paymentDate) AS Month, COUNT(*) AS PaymentCount
+FROM payments
+GROUP BY Month
+HAVING PaymentCount > 20
+ORDER BY PaymentCount DESC;
+</code></pre>
+<img src="./images/query3b.png" alt="Q3(b)">
+
+<h3>Q4(a) Create Customers Table</h3>
+<pre><code>CREATE TABLE Customers (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(255) UNIQUE,
+    phone_number VARCHAR(20)
+);
+</code></pre>
+<img src="./images/query4a.png" alt="Q4(a)">
+
+<h3>Q4(b) Create Orders Table</h3>
+<pre><code>CREATE TABLE Orders (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT,
+    order_date DATE,
+    total_amount DECIMAL(10,2) CHECK(total_amount > 0),
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+</code></pre>
+<img src="./images/query4b.png" alt="Q4(b)">
+
+<h3>Q5 — JOINS (Top 5 Countries by Order Count)</h3>
+<pre><code>SELECT c.country, COUNT(o.orderNumber) AS order_count
+FROM customers c
+JOIN orders o ON c.customerNumber = o.customerNumber
+GROUP BY c.country
+ORDER BY order_count DESC
+LIMIT 5;
+</code></pre>
+<img src="./images/query5.png" alt="Q5">
+
+<h3>Q6 — SELF JOIN (Employee → Manager)</h3>
+<pre><code>SELECT e.FullName AS Employee,
+       m.FullName AS Manager
+FROM project e
+LEFT JOIN project m
+ON e.ManagerID = m.EmployeeID;
+</code></pre>
+<img src="./images/query6.png" alt="Q6">
+
+<h3>Q7 — DDL: ALTER TABLE</h3>
+<pre><code>CREATE TABLE facility (
+    Facility_ID INT,
+    Name VARCHAR(255),
+    State VARCHAR(255),
+    Country VARCHAR(255)
+);
+
+ALTER TABLE facility
+MODIFY Facility_ID INT PRIMARY KEY AUTO_INCREMENT;
+
+ALTER TABLE facility
+ADD COLUMN City VARCHAR(255) NOT NULL AFTER Name;
+</code></pre>
+<img src="./images/query7.png" alt="Q7">
+
+<h3>Q8 — VIEW: product_category_sales</h3>
+<pre><code>CREATE VIEW product_category_sales AS
+SELECT pl.productLine,
+       SUM(od.quantityOrdered * od.priceEach) AS total_sales,
+       COUNT(DISTINCT o.orderNumber) AS number_of_orders
+FROM productlines pl
+JOIN products p ON pl.productLine = p.productLine
+JOIN orderdetails od ON p.productCode = od.productCode
+JOIN orders o ON od.orderNumber = o.orderNumber
+GROUP BY pl.productLine;
+</code></pre>
+<img src="./images/query8.png" alt="Q8">
+
+<h3>Q9 — STORED PROCEDURE</h3>
+<img src="./images/query9.png" alt="Q9">
+
+<h3>Q10(a) Rank customers by order frequency</h3>
+<img src="./images/query10a.png" alt="Q10(a)">
+
+<h3>Q10(b) YoY Percentage Change</h3>
+<img src="./images/query10b.png" alt="Q10(b)">
+
+<h3>Q11 — SUBQUERY</h3>
+<img src="./images/query11.png" alt="Q11">
+
+<h3>Q12 — ERROR HANDLING</h3>
+<img src="./images/query12.png" alt="Q12">
+
+<h3>Q13 — TRIGGER</h3>
+<img src="./images/query13.png" alt="Q13">
+
+</body>
+</html>
