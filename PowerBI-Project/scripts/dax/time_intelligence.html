@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Time Intelligence DAX Measures</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-left: 4px solid #3498db;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Time Intelligence DAX Measures</h1>
+
+<h2>This Year Sales</h2>
+<pre>
+This Year Sales =
+CALCULATE(
+    [Total Sales],
+    YEAR(Sales[Order Date]) = YEAR(TODAY())
+)
+</pre>
+
+<h2>Last Year Sales</h2>
+<pre>
+Last Year Sales =
+CALCULATE(
+    [Total Sales],
+    YEAR(Sales[Order Date]) = YEAR(TODAY()) - 1
+)
+</pre>
+
+<h2>Sales Growth %</h2>
+<pre>
+Sales Growth % =
+DIVIDE(
+    [This Year Sales] - [Last Year Sales],
+    [Last Year Sales]
+)
+</pre>
+
+</body>
+</html>
+
