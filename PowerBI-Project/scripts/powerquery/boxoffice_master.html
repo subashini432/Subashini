@@ -2,22 +2,28 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Power Query Script – Box Office Master</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    pre { background-color: #f4f4f4; padding: 10px; border-left: 4px solid #3498db; overflow-x: auto; }
-  </style>
+  <title>Power Query Script</title>
 </head>
 <body>
 
-<h1>Power Query Script – Box Office Master</h1>
+<h1>Power Query – Box Office Master Query</h1>
 
 <pre>
 let
-    Source = Table.Combine({Movies2020, Movies2021, Movies2022, Movies2023})
+    Source = Table.Combine({
+        Movies2020,
+        Movies2021,
+        Movies2022,
+        Movies2023
+    })
 in
     Source
 </pre>
+
+<p>
+This Power Query script combines box office data from multiple years
+into a single master table.
+</p>
 
 </body>
 </html>
