@@ -39,48 +39,50 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* ===== Section Spacing (Reduced & Professional) ===== */
+/* ===== Section Spacing (More Compact) ===== */
 section {
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 /* ===== Hero Section ===== */
 #home {
   background: #f4f4f4;
   text-align: center;
-  padding: 60px 20px;
+  padding: 50px 20px;
 }
 
 .hero-photo {
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 #home h1 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 #home p {
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
-/* ===== Headings & Text ===== */
+/* ===== Headings ===== */
 h1, h2 {
-  margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 12px;
 }
 
+/* ===== Paragraphs ===== */
 p {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 /* ===== About Section ===== */
 #about p {
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
   text-align: center;
 }
@@ -89,12 +91,13 @@ p {
 #skills ul {
   list-style: none;
   padding: 0;
+  margin: 0 auto;
   text-align: center;
 }
 
 #skills li {
   display: inline-block;
-  margin: 8px 15px;
+  margin: 6px 12px;
   font-weight: 500;
 }
 
@@ -102,11 +105,12 @@ p {
 #projects ul {
   list-style: none;
   padding: 0;
+  margin: 0 auto;
   text-align: center;
 }
 
 #projects li {
-  margin: 12px 0;
+  margin: 8px 0;
 }
 
 #projects a {
@@ -119,23 +123,18 @@ p {
   text-decoration: underline;
 }
 
-/* ===== Project Cards (Optional for Future Use) ===== */
+/* ===== Project Cards (Optional) ===== */
 .project-card {
   border: 1px solid #ddd;
-  padding: 15px;
+  padding: 12px;
   margin: 10px auto;
-  max-width: 600px;
+  max-width: 550px;
   border-radius: 6px;
-}
-
-.project-card img {
-  max-width: 100%;
-  height: auto;
 }
 
 /* ===== Contact Section ===== */
 #contact p {
-  margin: 5px 0;
+  margin: 4px 0;
   text-align: center;
 }
 
@@ -153,5 +152,5 @@ footer {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 15px;
+  padding: 12px;
 }
