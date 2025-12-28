@@ -1,17 +1,22 @@
 /* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   color: #333;
+  background: #ffffff;
 }
 
 /* ===== Navigation ===== */
 nav {
   background: #333;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -39,9 +44,33 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* ===== Section Spacing (More Compact) ===== */
+/* ===== Section Spacing (Professional & Compact) ===== */
 section {
-  padding: 30px 20px;
+  padding: 35px 20px;
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ===== Paragraphs ===== */
+p {
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 
 /* ===== Hero Section ===== */
@@ -61,28 +90,13 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-#home h1 {
-  margin-bottom: 8px;
-}
-
 #home p {
   margin: 4px 0;
 }
 
-/* ===== Headings ===== */
-h1, h2 {
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-/* ===== Paragraphs ===== */
-p {
-  margin-bottom: 8px;
-}
-
 /* ===== About Section ===== */
 #about p {
-  max-width: 750px;
+  max-width: 760px;
   margin: 0 auto;
   text-align: center;
 }
@@ -97,84 +111,33 @@ p {
 
 #skills li {
   display: inline-block;
-  margin: 6px 12px;
+  margin: 6px 14px;
   font-weight: 500;
 }
 
-/* ===== Projects Section ===== */
-#projects ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#projects li {
-  margin: 8px 0;
-}
-
-#projects a {
-  text-decoration: none;
-  color: #007acc;
-  font-weight: 500;
-}
-
-#projects a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Project Cards (Optional) ===== */
-.project-card {
-  border: 1px solid #ddd;
-  padding: 12px;
-  margin: 10px auto;
-  max-width: 550px;
-  border-radius: 6px;
-}
-
-/* ===== Contact Section ===== */
-#contact p {
-  margin: 4px 0;
-  text-align: center;
-}
-
-#contact a {
-  color: #007acc;
-  text-decoration: none;
-}
-
-#contact a:hover {
-  text-decoration: underline;
-}
 /* ===== Projects Section ===== */
 .projects-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 /* ===== Project Card ===== */
 .project-card {
   background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 22px;
   width: 280px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
 .project-card p {
   font-size: 14px;
-  margin-bottom: 15px;
   color: #555;
 }
 
@@ -190,8 +153,23 @@ p {
 
 /* ===== Hover Effect ===== */
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* ===== Contact Section ===== */
+#contact p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+#contact a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
 }
 
 /* ===== Footer ===== */
@@ -199,5 +177,6 @@ footer {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 12px;
+  padding: 14px;
+  font-size: 14px;
 }
