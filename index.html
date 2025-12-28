@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subashini Portfolio</title>
+ <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,7 +24,9 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home">
+<section id="home" class="hero">
+  <img src="images/subashini.jpeg" alt="Subashini" class="hero-photo">
+
   <h1>Subashini</h1>
   <p>Data Analyst | Skilled in Excel, SQL, and Power BI</p>
   <p>Transforming data into actionable insights to support business decisions</p>
@@ -30,11 +36,16 @@
   <section id="about">
   <h2>About Me</h2>
   <p>
-    I’m a passionate Data Analyst dedicated to turning raw data into actionable insights. I have experience working with tools such as Excel, SQL, and Power BI to analyze datasets, create dashboards, and solve real-world business problems.  
+    I’m a passionate Data Analyst dedicated to turning raw data into actionable insights. 
+    I have experience working with tools such as Excel, SQL, and Power BI to analyze datasets,
+    create dashboards, and solve real-world business problems.  
     
-    I am detail-oriented, curious, and committed to continuous learning, with a focus on improving processes and supporting data-driven decision making.  
+    I am detail-oriented, curious, and committed to continuous learning, with a focus on 
+    improving processes and supporting data-driven decision making.  
     
-    This portfolio highlights my work on projects involving data cleaning, visualization, reporting, and exploratory analysis, demonstrating my ability to transform data into meaningful outcomes.
+    This portfolio highlights my work on projects involving data cleaning, visualization, 
+    reporting, and exploratory analysis, demonstrating my ability to transform data into meaningful outcomes.
+    
   </p>
 </section>
   <!-- Skills Section -->
@@ -51,13 +62,37 @@
  <!-- Example: Projects Section -->
 <section id="projects">
   <h2>Projects</h2>
-  <ul>
-    <li><a href="./SQL-Project/index.html">SQL Project — Classic Models</a></li>
-    <li><a href="./PowerBI-Project/index.html">Power BI Project — Business Intelligence Dashboard</a></li>
-    <li><a href="./Excel-Project/index.html">Excel Project — Sales Analysis Dashboard</a></li>
-  </ul>
-</section>
-  </ul>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+      <h3>SQL Project — Classic Models</h3>
+      <p>
+        Performed data analysis using SQL queries including joins,
+        aggregations, and subqueries to answer business questions.
+      </p>
+      <a href="./SQL-Project/index.html" target="_blank">View Project →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Power BI Project — Business Dashboard</h3>
+      <p>
+        Designed an interactive Power BI dashboard with KPIs,
+        filters, and insights for decision making.
+      </p>
+      <a href="./PowerBI-Project/index.html" target="_blank">View Project →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Excel Project — Sales Analysis</h3>
+      <p>
+        Built a complete Excel solution using pivot tables,
+        charts, dashboards, and VBA automation.
+      </p>
+      <a href="./Excel-Project/index.html" target="_blank">View Project →</a>
+    </div>
+
+  </div>
 </section>
 
   <!-- Contact Section -->
