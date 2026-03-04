@@ -1,0 +1,10 @@
+Data Transformations Performed in Power Query:
+- Removed duplicate rows from Sales table
+- Removed null values from Customer table
+- Changed data types (Date, Currency, Whole Number)
+- Renamed columns for better readability
+- Created new column: Full Name (FirstName + LastName)
+- Filtered out cancelled orders
+- Merged Sales with Customer table
+- Removed unnecessary columns
+- Trimmed and cleaned text fields

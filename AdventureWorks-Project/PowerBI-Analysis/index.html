@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adventure Works - Power BI Analysis</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<header>
+  <!-- navbar -->
+</header>
+
+<section>
+  <h2>Power BI Analysis</h2>
+
+  <!-- Power BI File -->
+  <h3>Power BI File</h3>
+  <a href="data/AdventureWorks_PowerBI_Analysis.pbix" target="_blank">
+    Download Power BI Dashboard (.pbix)
+  </a>
+
+  <!-- Documentation -->
+  <h3>Project Documentation</h3>
+  <ul>
+    <li><a href="Docs/Project_Overview.pdf" target="_blank">Project Overview</a></li>
+    <li><a href="Docs/Questionnaire.pdf" target="_blank">Questionnaire</a></li>
+  </ul>
+
+  <!-- Dashboard Screenshot -->
+  <h3>Dashboard View</h3>
+  <img src="images/dashboard.png" width="800" alt="Power BI Dashboard Screenshot">
+
+  <!-- Data Model Screenshot -->
+  <h3>Data Model (Star Schema)</h3>
+  <img src="images/data_model.png" width="800" alt="Power BI Data Model Screenshot">
+
+  <!-- DAX Measures -->
+  <h3>Key DAX Measures</h3>
+  <ul>
+    <li>
+      Sales Amount = SUMX(Sales, Sales[UnitPrice] * Sales[OrderQuantity] * (1 - Sales[UnitPriceDiscountPct]))
+    </li>
+    <li>
+      Production Cost = SUMX(Sales, Sales[OrderQuantity] * RELATED(DimProduct[StandardCost]))
+    </li>
+    <li>
+      Profit = [Sales Amount] - [Production Cost]
+    </li>
+    <li>
+      Profit Margin = DIVIDE([Profit], [Sales Amount])
+    </li>
+    <li>
+      Total Customers = DISTINCTCOUNT(Sales[CustomerKey])
+    </li>
+  </ul>
+
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>
