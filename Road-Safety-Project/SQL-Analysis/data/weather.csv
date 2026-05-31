@@ -1,0 +1,10 @@
+weather,total_accidents,fatal,serious,slight,fatal_percentage
+"Fine - No wind",79601,1225,18996,59380,1.54
+"Raining - No wind",12328,173,2840,9315,1.40
+Unknown,3145,11,339,2795,0.35
+Other,3052,24,655,2373,0.79
+"Raining - High wind",1125,36,282,807,3.20
+"Fine - High wind",935,23,257,655,2.46
+"Fog or mist",474,8,132,334,1.69
+"Snowing - No wind",242,2,59,181,0.83
+"Snowing - High wind",25,0,7,18,0.00

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UK Road Safety 2024 — Data Analysis Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', Arial, sans-serif; background: #f4f4f4; color: #333; }
+    .hero { background: linear-gradient(135deg, #1A2E4A, #2E6DA4); color: white; padding: 50px 20px; text-align: center; }
+    .hero h1 { font-size: 28px; margin-bottom: 10px; }
+    .hero p { font-size: 14px; color: #d0e4f4; margin: 4px 0; }
+    .badges { display: flex; justify-content: center; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+    .badge { background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 20px; font-size: 12px; border: 1px solid rgba(255,255,255,0.3); }
+    .section { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+    .section h2 { font-size: 20px; color: #1A2E4A; margin-bottom: 20px; border-bottom: 3px solid #2E6DA4; padding-bottom: 8px; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 30px; }
+    .kpi-card { background: #1A2E4A; color: white; padding: 20px; border-radius: 10px; text-align: center; }
+    .kpi-card .number { font-size: 24px; font-weight: 600; color: #a0c4e8; }
+    .kpi-card .label { font-size: 12px; margin-top: 4px; }
+    .project-links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px; }
+    .btn { padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; }
+    .btn-primary { background: #2E6DA4; color: white; }
+    .btn-secondary { background: white; color: #333; border: 1px solid #ccc; }
+    .findings { background: white; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .finding-item { padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; line-height: 1.6; }
+    .finding-item:last-child { border-bottom: none; }
+    .finding-number { font-weight: 600; color: #2E6DA4; margin-right: 8px; }
+    .tools { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+    .tool-tag { background: #EAF2FB; color: #1A2E4A; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>UK Road Safety Analysis 2024</h1>
+    <p>Real Government Data — UK Department for Transport</p>
+    <p>100,927 Road Collisions | 128,272 Casualties | 1,502 Fatalities</p>
+    <div class="badges">
+      <span class="badge">SQL</span>
+      <span class="badge">Power BI</span>
+      <span class="badge">Excel</span>
+      <span class="badge">Real UK Data</span>
+      <span class="badge">300,000+ Rows</span>
+    </div>
+  </div>
+
+  <div class="section">
+
+    <h2>Project Overview</h2>
+    <p style="font-size:14px; line-height:1.8; margin-bottom:20px;">
+      End-to-end data analysis of UK road collision data sourced from the 
+      UK Department for Transport STATS19 system. This project covers the complete 
+      analytics pipeline — from raw data import and SQL cleaning through to 
+      interactive Power BI dashboards and Excel reporting.
+    </p>
+
+    <div class="tools">
+      <span class="tool-tag">MySQL — Data Import and Cleaning</span>
+      <span class="tool-tag">SQL — Advanced Analysis</span>
+      <span class="tool-tag">Power BI — Interactive Dashboard</span>
+      <span class="tool-tag">Excel — Summary Reporting</span>
+      <span class="tool-tag">GitHub — Version Control</span>
+    </div>
+
+    <br><br>
+
+    <h2>Key Numbers</h2>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="number">100,927</div>
+        <div class="label">Total Accidents</div>
+      </div>
+      <div class="kpi-card">
+        <div class="number">128,272</div>
+        <div class="label">Total Casualties</div>
+      </div>
+      <div class="kpi-card">
+        <div class="number">1,502</div>
+        <div class="label">Fatalities</div>
+      </div>
+      <div class="kpi-card">
+        <div class="number">23,567</div>
+        <div class="label">Serious Injuries</div>
+      </div>
+      <div class="kpi-card">
+        <div class="number">1.49%</div>
+        <div class="label">Fatal Rate</div>
+      </div>
+    </div>
+
+    <h2>Key Findings</h2>
+    <div class="findings">
+      <div class="finding-item">
+        <span class="finding-number">1.</span>
+        <strong>Friday Most Dangerous</strong> — 16,444 accidents recorded on Fridays — highest of all days. Sunday safest with 11,388.
+      </div>
+      <div class="finding-item">
+        <span class="finding-number">2.</span>
+        <strong>Rush Hour Peak</strong> — Accidents peak at 5PM (8,784) and 4PM (8,487) coinciding with evening rush hour traffic.
+      </div>
+      <div class="finding-item">
+        <span class="finding-number">3.</span>
+        <strong>Urban vs Rural</strong> — Urban areas had more accidents (67,304) but Rural roads had higher fatal rate — speed is the key factor.
+      </div>
+      <div class="finding-item">
+        <span class="finding-number">4.</span>
+        <strong>Single Carriageway Risk</strong> — Single carriageway roads account for the majority of all accidents despite lower speed limits.
+      </div>
+      <div class="finding-item">
+        <span class="finding-number">5.</span>
+        <strong>Driver Age</strong> — Drivers aged 26-35 most frequently involved (35,205). Older drivers 56-65 showed higher fatality rate relative to accident count.
+      </div>
+      <div class="finding-item">
+        <span class="finding-number">6.</span>
+        <strong>Weather Paradox</strong> — Most accidents occurred in fine weather — overconfidence in good conditions is a key risk factor.
+      </div>
+      <div class="finding-item">
+        <span class="finding-number">7.</span>
+        <strong>Daily Fatalities</strong> — Approximately 4 people die on UK roads every single day based on 2024 data.
+      </div>
+    </div>
+
+    <br>
+
+    <h2>Project Components</h2>
+    <div class="project-links">
+      <a href="./SQL-Analysis/index.html" class="btn btn-primary">SQL Analysis →</a>
+      <a href="./PowerBI-Analysis/index.html" class="btn btn-primary">Power BI Dashboard →</a>
+      <a href="./Excel-Analysis/index.html" class="btn btn-primary">Excel Report →</a>
+      <a href="https://github.com/subashini432" target="_blank" class="btn btn-secondary">View on GitHub →</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

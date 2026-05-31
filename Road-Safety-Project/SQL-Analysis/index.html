@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Analysis — UK Road Safety 2024</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', Arial, sans-serif; background: #f4f4f4; color: #333; }
+    .hero { background: linear-gradient(135deg, #1A2E4A, #2E6DA4); color: white; padding: 40px 20px; text-align: center; }
+    .hero h1 { font-size: 24px; margin-bottom: 8px; }
+    .hero p { font-size: 13px; color: #d0e4f4; }
+    .back-btn { display: inline-block; margin: 20px; padding: 8px 16px; background: #2E6DA4; color: white; border-radius: 6px; text-decoration: none; font-size: 13px; }
+    .section { padding: 30px 20px; max-width: 900px; margin: 0 auto; }
+    .section h2 { font-size: 18px; color: #1A2E4A; margin-bottom: 16px; border-bottom: 3px solid #2E6DA4; padding-bottom: 6px; }
+    .query-card { background: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #2E6DA4; }
+    .query-card h3 { font-size: 15px; color: #1A2E4A; margin-bottom: 8px; }
+    .query-card p { font-size: 13px; color: #555; line-height: 1.6; }
+    .finding-tag { display: inline-block; background: #EAF2FB; color: #1A2E4A; padding: 4px 10px; border-radius: 12px; font-size: 11px; margin-top: 8px; font-weight: 500; }
+    .screenshot { width: 100%; border-radius: 8px; margin-top: 12px; border: 1px solid #e0e0e0; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>SQL Analysis</h1>
+    <p>UK Road Safety 2024 — Data Cleaning and Business Analysis</p>
+  </div>
+
+  <a href="../index.html" class="back-btn">← Back to Project</a>
+
+  <div class="section">
+
+    <h2>What I Did</h2>
+    <p style="font-size:14px; line-height:1.8; margin-bottom:24px;">
+      Imported 3 CSV files containing 300,000+ rows into MySQL database.
+      Performed comprehensive data cleaning including NULL checks, invalid value
+      detection and duplicate verification. Wrote 9 business analysis queries
+      across 13 sections to answer key questions about UK road safety in 2024.
+    </p>
+
+    <h2>Data Cleaning Findings</h2>
+
+    <div class="query-card">
+      <h3>NULL Value Check</h3>
+      <p>Checked all key columns for missing values across 100,927 collision records.</p>
+      <span class="finding-tag">Result: Zero NULL values found — dataset confirmed complete</span>
+    </div>
+
+    <div class="query-card">
+      <h3>Speed Limit Validation</h3>
+      <p>Checked for invalid speed limit codes. UK valid limits: 20, 30, 40, 50, 60, 70 mph only.</p>
+      <span class="finding-tag">Finding: 3 records with invalid code -1 — excluded from speed analysis</span>
+    </div>
+
+    <div class="query-card">
+      <h3>Casualty Age Validation</h3>
+      <p>Checked for invalid age codes in casualties table across 128,272 records.</p>
+      <span class="finding-tag">Finding: 2,552 records with age -1 (2%) — excluded from age analysis only</span>
+    </div>
+
+    <h2>Business Analysis Queries</h2>
+
+    <div class="query-card">
+      <h3>Question 1 — Accident Severity Breakdown</h3>
+      <p>What percentage of accidents were fatal, serious and slight?</p>
+      <span class="finding-tag">Fatal: 1.49% | Serious: 23.35% | Slight: 75.16%</span>
+    </div>
+
+    <div class="query-card">
+      <h3>Question 2 — Day of Week Analysis</h3>
+      <p>Which day of the week has the most road accidents?</p>
+      <span class="finding-tag">Friday most dangerous: 16,444 accidents | Sunday safest: 11,388</span>
+    </div>
+
+    <div class="query-card">
+      <h3>Question 3 — Urban vs Rural Severity</h3>
+      <p>Where are accidents more severe — urban or rural areas?</p>
+      <span class="finding-tag">Urban: 67,304 accidents | Rural: 33,620 but higher fatal rate</span>
+    </div>
+
+    <div class="query-card">
+      <h3>Question 4 — Road Type Analysis</h3>
+      <p>Which road type causes the most accidents and casualties?</p>
+      <span class="finding-tag">Single carriageway roads account for majority of all collisions</span>
+    </div>
+
+    <div class="query-card">
+      <h3>Question 5 — Time of Day</h3>
+      <p>What time of day is most dangerous on UK roads?</p>
+      <span class="finding-tag">Peak: 5PM (8,784 accidents) and 4PM (8,487 accidents)</span>
+    </div>
+
+    <div class="query-card">
+      <h3>Question 6 — Driver Age Groups</h3>
+      <p>Which age group of drivers is most involved in accidents?</p>
+      <span class="finding-tag">Ages 26-35 most involved: 35,205 incidents</span>
+    </div>
+
+    <div class="query-card">
+      <h3>Question 7 — Fatal Casualties by Age</h3>
+      <p>Which age group had the most deaths in road accidents?</p>
+      <span class="finding-tag">All ages included — passengers, pedestrians, cyclists, drivers</span>
+    </div>
+
+    <div class="query-card">
+      <h3>Question 8 — Weather Conditions</h3>
+      <p>How do weather conditions affect accident severity?</p>
+      <span class="finding-tag">Most accidents in fine weather — overconfidence key risk factor</span>
+    </div>
+
+    <div class="query-card">
+      <h3>Question 9 — Light Conditions</h3>
+      <p>How does light condition affect accident rates?</p>
+      <span class="finding-tag">Daylight accounts for majority — but darkness increases fatal rate</span>
+    </div>
+
+    <br>
+    <a href="https://github.com/subashini432" target="_blank" class="back-btn">View SQL Code on GitHub →</a>
+
+  </div>
+
+</body>
+</html>

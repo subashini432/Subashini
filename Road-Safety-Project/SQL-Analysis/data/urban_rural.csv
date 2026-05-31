@@ -1,0 +1,4 @@
+area_type,total_accidents,fatal,serious,slight,fatal_percentage
+Urban,67304,554,14565,52185,0.82
+Rural,33620,948,9002,23670,2.82
+"Urban or Rural",3,0,0,3,0.00

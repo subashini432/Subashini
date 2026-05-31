@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power BI Dashboard — UK Road Safety 2024</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', Arial, sans-serif; background: #f4f4f4; color: #333; }
+    .hero { background: linear-gradient(135deg, #1A2E4A, #2E6DA4); color: white; padding: 40px 20px; text-align: center; }
+    .hero h1 { font-size: 24px; margin-bottom: 8px; }
+    .hero p { font-size: 13px; color: #d0e4f4; }
+    .back-btn { display: inline-block; margin: 20px; padding: 8px 16px; background: #2E6DA4; color: white; border-radius: 6px; text-decoration: none; font-size: 13px; }
+    .section { padding: 30px 20px; max-width: 900px; margin: 0 auto; }
+    .section h2 { font-size: 18px; color: #1A2E4A; margin-bottom: 16px; border-bottom: 3px solid #2E6DA4; padding-bottom: 6px; }
+    .dashboard-img { width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); margin-bottom: 24px; border: 1px solid #e0e0e0; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .feature-card { background: white; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-top: 4px solid #2E6DA4; }
+    .feature-card h3 { font-size: 13px; color: #1A2E4A; margin-bottom: 6px; }
+    .feature-card p { font-size: 12px; color: #555; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Power BI Dashboard</h1>
+    <p>UK Road Safety 2024 — Interactive Analytics Dashboard</p>
+  </div>
+
+  <a href="../index.html" class="back-btn">← Back to Project</a>
+
+  <div class="section">
+
+    <h2>Dashboard Overview</h2>
+    <p style="font-size:14px; line-height:1.8; margin-bottom:20px;">
+      Interactive Power BI dashboard built from 11 CSV files exported from SQL analysis.
+      Dashboard features 5 KPI cards and 8 interactive charts covering all key dimensions
+      of UK road safety data for 2024.
+    </p>
+
+    <img src="./images/powerbi_dashboard.png" alt="UK Road Safety Power BI Dashboard" class="dashboard-img">
+
+    <h2>Dashboard Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>5 KPI Cards</h3>
+        <p>Total accidents, fatalities, casualties, serious injuries and fatal percentage</p>
+      </div>
+      <div class="feature-card">
+        <h3>Severity Donut Chart</h3>
+        <p>Fatal, Serious and Slight breakdown with percentages</p>
+      </div>
+      <div class="feature-card">
+        <h3>Day of Week Bar Chart</h3>
+        <p>Accidents by day showing Friday as most dangerous</p>
+      </div>
+      <div class="feature-card">
+        <h3>Time of Day Line Chart</h3>
+        <p>Hourly accident pattern showing rush hour peaks</p>
+      </div>
+      <div class="feature-card">
+        <h3>Urban vs Rural Stacked Bar</h3>
+        <p>Severity comparison between urban and rural areas</p>
+      </div>
+      <div class="feature-card">
+        <h3>Driver Age Bar Chart</h3>
+        <p>Age group involvement with fatal accident overlay</p>
+      </div>
+      <div class="feature-card">
+        <h3>Road Type Analysis</h3>
+        <p>Accident count by road type — single carriageway highest</p>
+      </div>
+      <div class="feature-card">
+        <h3>Weather and Light</h3>
+        <p>Conditions impact on accident severity and frequency</p>
+      </div>
+    </div>
+
+    <a href="https://github.com/subashini432" target="_blank" class="back-btn">View on GitHub →</a>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+light_condition,total_accidents,fatal,serious,slight,fatal_percentage
+Daylight,71550,893,16125,54532,1.25
+"Darkness - Lights lit",21241,315,5188,15738,1.48
+"Darkness - No lighting",5695,261,1711,3723,4.58
+"Darkness - Lighting unknown",1679,20,307,1352,1.19
+"Darkness - Lights unlit",756,13,233,510,1.72
+Unknown,6,0,3,3,0.00

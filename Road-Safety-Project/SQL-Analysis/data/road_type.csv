@@ -1,0 +1,7 @@
+road_type_name,total_accidents,total_casualties,fatal_accidents,avg_casualties_per_accident
+"Single carriageway",73618,93099,1131,1.26
+"Dual carriageway",14671,20324,308,1.39
+Roundabout,6204,7454,35,1.20
+Unknown,2568,2755,5,1.07
+"One way street",2224,2489,9,1.12
+"Slip road",1642,2151,14,1.31
