@@ -1,5 +1,20 @@
-Production Cost = SUMX(Sales,Sales[OrderQuantity] *RELATED(DimProduct[StandardCost]))
-Profit = [Sales Amount] - [Production Cost]
-Profit Margin = DIVIDE([Profit], [Sales Amount])
-Sales Amount = SUMX(Sales,Sales[UnitPrice] *Sales[OrderQuantity] *(1 - Sales[UnitPriceDiscountPct]))
-Total Customers = DISTINCTCOUNT(Sales[CustomerKey])
+Sales Amount =
+SUMX(
+    Sales,
+    Sales[UnitPrice] * Sales[OrderQuantity] * (1 - Sales[UnitPriceDiscountPct])
+)
+
+Production Cost =
+SUMX(
+    Sales,
+    Sales[OrderQuantity] * RELATED(DimProduct[StandardCost])
+)
+
+Profit =
+[Sales Amount] - [Production Cost]
+
+Profit Margin =
+DIVIDE([Profit], [Sales Amount])
+
+Total Customers =
+DISTINCTCOUNT(Sales[CustomerKey])
